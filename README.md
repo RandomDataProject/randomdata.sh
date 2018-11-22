@@ -15,11 +15,11 @@ randomdata.sh provides an easy-to-use API to generate all kind of random data.
 All API access is over HTTPS, and accessed from https://api.randomdata.sh/v1. All data is received as a JSON object.
 
 ### Getting your first random numbers
-Example of a command
+#### Example of a command
 ```
 $curl -i https://api.randomdata.sh/v1/ -d 'n=5' -d 'min=0' -d 'max=100' -d 'method=getint'
 ```
-Header from the server
+#### Header from the server
 ```
 HTTP/2 200
 date: Thu, 22 Nov 2018 20:31:30 GMT
@@ -30,7 +30,7 @@ expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi
 server: cloudflare
 cf-ray: 47de28f57e984310-MXP
 ```
-Data
+#### Data
 ```
 {"BYTE_USED": 20, "DATA": [34, 56, 48, 78, 76], "EXTRA": 0, "QUOTA": 982543, "RDID": "rd.shv1#b6AxMAwmqsCm", "STATUS": "success"}
 ```
