@@ -3,8 +3,8 @@
 randomdata.sh is an online hardware random generator using heat noise as entropy source to generate high quality random number.
 
 What you will learn:
+ * How to get your first random numbers.
  * Why hardware random generator are better than software one.
- * How to get your first random number.
  * How to use it in your application.
  * How to check your quota.
 
@@ -14,7 +14,7 @@ randomdata.sh provides an easy-to-use API to generate all kind of random data.
 
 All API access is over HTTPS, and accessed from https://api.randomdata.sh/v1. All data is received as a JSON object.
 
-### Getting your first random number
+### Getting your first random numbers
 Example of a command
 ```
 $curl -i https://api.randomdata.sh/v1/ -d 'n=5' -d 'min=0' -d 'max=100' -d 'method=getint'
