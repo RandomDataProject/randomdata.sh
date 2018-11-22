@@ -1,6 +1,6 @@
 # What is randomdata.sh
 
-> randomdata.sh is an online hardware random generator using heat noise as entropy source to generate high quality random number.
+randomdata.sh is an online hardware random generator using heat noise as entropy source to generate high quality random number.
 
 ## Get started
 
