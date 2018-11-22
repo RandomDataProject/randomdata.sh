@@ -5,7 +5,6 @@ randomdata.sh is an online hardware random generator using heat noise as entropy
 What you will learn:
  * Why hardware random generator are better than software one.
  * How to get your first random numbers.
- * How to use it in your application.
  * How to check your quota.
  
 ## Why using a hardware random generator is better?
@@ -42,6 +41,16 @@ cf-ray: 47de28f57e984310-MXP
 ```
 {"BYTE_USED": 20, "DATA": [34, 56, 48, 78, 76], "EXTRA": 0, "QUOTA": 982543, "RDID": "rd.shv1#b6AxMAwmqsCm", "STATUS": "success"}
 ```
+
+## Quota and limitation
+
+To ensure a fair use of our services, you need to respect a few rules. Failure to respect them will result in ban.
+
+Every time you use the generator to generate random data it needs to take random bytes from the entropy pool. By default everyone has a quota of 1 000 000 bytes every days. You can check your quota on the statistic page.
+
+Try to group your requests (it’s better to send one request to download 100 numbers rather than 10 small requests of 10 numbers).
+
+Don’t send multiple parallel requests, if you use a multi-threaded client make sure it serializes the requests.
 
 ## API license
 
