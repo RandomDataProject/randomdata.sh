@@ -3,18 +3,26 @@
 randomdata.sh is an online hardware random generator using heat noise as entropy source to generate high quality random number.
 
 What you will learn:
- * How to get your first random numbers.
  * Why hardware random generator are better than software one.
+ * How to get your first random numbers.
  * How to use it in your application.
  * How to check your quota.
+ 
+## Why using a hardware random generator is better?
+
+Computers have a really hard time to create true random number, most of the pseudo random generator generate a stream of random number based on a seed and an internal state. If somehow this state leaks it can be used to predict the upcoming numbers.
+
+Since our generator uses Johnson noise as entropy source, there is no internal state. The entropy arises from heat energy within the silicon wafer. Electrons created during this process are independent of photons falling on the detector. These electrons are captured by the sensor array and counted as signal.
+
+Sadly most of the time those generators are complicated and expensive to setup this is why we provide this service to the community allowing anyone to benefit from its.
 
 ## Get started
 
-randomdata.sh provides an easy-to-use API to generate all kind of random data.
+Okay so now that we know the importance of good entropy, let's see how to use the API.
 
-All API access is over HTTPS, and accessed from https://api.randomdata.sh/v1. All data is received as a JSON object.
+As you will see, randomdata.sh provides an easy-to-use API to generate all kind of random data. All API access is over HTTPS, and accessed from https://api.randomdata.sh/v1. All data is received as a JSON object.
 
-### Getting your first random numbers
+### Your first random numbers
 #### Example of a command
 ```
 $curl -i https://api.randomdata.sh/v1/ -d 'n=5' -d 'min=0' -d 'max=100' -d 'method=getint'
@@ -34,10 +42,6 @@ cf-ray: 47de28f57e984310-MXP
 ```
 {"BYTE_USED": 20, "DATA": [34, 56, 48, 78, 76], "EXTRA": 0, "QUOTA": 982543, "RDID": "rd.shv1#b6AxMAwmqsCm", "STATUS": "success"}
 ```
-
-### Why using a hardware random generator is better?
-
-
 
 ## API license
 
