@@ -7,11 +7,10 @@
 randomdata.sh provides an easy-to-use API to generate all kind of random data.
 
 What you will learn:
-
-    Why hardware random generator are better than software one
-    How to get your first random number
-    How to use it in your application
-    How to check your quota
+ * Why hardware random generator are better than software one 
+ * How to get your first random number
+ * How to use it in your application
+ * How to check your quota
 
 ## API license
 
