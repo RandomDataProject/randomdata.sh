@@ -1,8 +1,8 @@
-## Version 1.2 (current version)
+## Version 1.12 (current version)
  * Add a status page to monitor the service. (Avaliable here: https://status.randomdata.sh)
  * Fixing a bug in the statistic module
  
-## Version 1.15
+## Version 1.11
  * Add the possibility to generate random colors
  * Add the possibility to generate random passphrases
 
