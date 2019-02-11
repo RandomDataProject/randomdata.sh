@@ -42,11 +42,24 @@ cf-ray: 47de28f57e984310-MXP
 {"BYTE_USED": 20, "DATA": [34, 56, 48, 78, 76], "EXTRA": 0, "QUOTA": 982543, "RDID": "rd.shv1#b6AxMAwmqsCm", "STATUS": "success"}
 ```
 
-## Quota and limitation
+Let's explain each sections:
 
-To ensure a fair use of our services, you need to respect a few rules. Failure to respect them will result in ban.
+| field |     | type | explanation |
+| ----- | --- |  --- | --- |
+| RDID | (mandatory) |  string | RandomDataID Contain an unique id used to identify the request (If you encounter any bugs, please include it in the bug report) |
+| INFO | (optional) |  string | Contain info regarding what happened mainly when an error occurred |
+| STATUS | (mandatory) |  string | ERROR if something went wrong, SUCCESS if everything went well |
+| DATA | (optional) |  array | An array containing your random data in the desired format |
+| QUOTA | (mandatory) |  string | By default you can use 1 000 000 random bytes every days. This value show how many you can use for the current day. Quotas are reset automatically at midnight UTC. |
+| EXTRA | (optional) |  string | Reserved for future usage |
+| BYTE_USED | (mandatory) |  string | Indicate how many raw bytes where used to process your query |
 
-Every time you use the generator to generate random data it needs to take random bytes from the entropy pool. By default everyone has a quota of 1 000 000 bytes every days. You can check your quota on the statistic page.
+
+## Quota and good practices
+
+To ensure a fair use of our services and protect our users, you need to respect a few rules. Failure to respect them will result in ban.
+
+Every time you use the generator to generate random data it needs to take random bytes from the entropy pool. By default everyone has a quota of 1 000 000 bytes every days. You can check your quota on the statistic page or with the method 
 
 Try to group your requests (it’s better to send one request to download 100 numbers rather than 10 small requests of 10 numbers).
 
