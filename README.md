@@ -24,7 +24,7 @@ As you will see, randomdata.sh provides an easy-to-use API to generate all kind 
 ### Your first random numbers
 #### Example of a command
 ```
-$curl -i https://api.randomdata.sh/v1/ -d 'n=5' -d 'min=0' -d 'max=100' -d 'method=getint'
+$ curl -i https://api.randomdata.sh/v1/ -d 'n=5' -d 'min=0' -d 'max=100' -d 'method=getint'
 ```
 #### Header from the server
 ```
@@ -57,9 +57,18 @@ Let's explain each sections:
 
 ## Quota and good practices
 
-To ensure a fair use of our services and protect our users, you need to respect a few rules. Failure to respect them will result in ban.
+To ensure a fair use of our services and protect our users, you need to respect a few rules. **Failure to respect them will result in ban**.
 
-Every time you use the generator to generate random data it needs to take random bytes from the entropy pool. By default everyone has a quota of 1 000 000 bytes every days. You can check your quota on the statistic page or with the method 
+Every time you use the generator to generate random data it needs to take random bytes from the entropy pool. By default everyone has a quota of 1 000 000 bytes every days. You can check your quota on the statistic page.
+
+### Checking your quota with the API
+You can also easily check you current quota with the method getquota.
+```
+$ https://api.randomdata.sh/v1/?method=getquota
+{"QUOTA": 999584, "RDID": "rd.shv1#UXJ3jyhqEo2j", "STATUS": "success"}
+```
+
+### General advice regarding requests
 
 Try to group your requests (it’s better to send one request to download 100 numbers rather than 10 small requests of 10 numbers).
 
